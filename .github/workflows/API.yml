@@ -1,0 +1,33 @@
+name: javaTest
+
+on:
+  push:
+    branches: [ "main", "master"]
+  workflow_dispatch:
+  
+    
+jobs:
+  buildAndTest:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java 8.51
+        uses: actions/setup-java@v3
+        with:
+          distribution: "zulu"
+          java-version: "17"
+      - name: Install dependecies
+        run: |
+          wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+          tar -xvf apache-maven-3.6.3-bin.tar.gz
+          mv apache-maven-3.6.3 /opt/
+      - name: Run app
+        run: |
+          mvn clean package
+          mvn spring-boot:run
+      - name: Test with Junit
+        run: |
+          mvn test
+        
+  
