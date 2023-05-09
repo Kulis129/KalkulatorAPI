@@ -24,8 +24,7 @@ jobs:
           mv apache-maven-3.6.3 /opt/
       - name: Run app
         run: |
-          mvn spring-boot:run
-          mvn clean package
+          mvn clean install
       - name: Test with Junit
         run: |
           mvn test
