@@ -22,10 +22,10 @@ jobs:
           wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
           tar -xvf apache-maven-3.6.3-bin.tar.gz
           mv apache-maven-3.6.3 /opt/
-      - name: Run app
-        run: |
-          mvn clean package
-          mvn spring-boot:run
+#       - name: Run app
+#         run: |
+#           mvn clean package
+#           mvn spring-boot:run
       - name: Test with Junit
         run: |
           mvn test
