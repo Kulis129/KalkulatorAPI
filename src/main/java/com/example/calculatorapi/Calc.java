@@ -14,23 +14,17 @@ public class Calc {
 
     @GetMapping("/mult")
     public Double multiplication(@RequestParam double a, @RequestParam double b){
-        return a*b;
+        return method.multiplication(a,b);
     }
 
     @GetMapping("/sub")
     public Double subtraction(@RequestParam double a, @RequestParam double b){
-        return a-b;
+        return method.subtraction(a,b);
     }
 
     @GetMapping("/div")
     public String division(@RequestParam double a, @RequestParam double b){
-        if (b==0){
-            throw new ZeroDiv();
-        }
-        else{
-            double d=div(a,b);
-            return Double.toString(d);
-        }
+        return method.division(a,b);
     }
 
     public double div(double a, double b){
