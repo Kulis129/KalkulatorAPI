@@ -11,6 +11,6 @@ RUN git clone https://github.com/Kulis129/KalkulatorAPI.git
 
 WORKDIR /KalkulatorAPI/
 
-RUN jshall -v
+RUN jshell -v
 RUN mvn clean install
 RUN mvn test
