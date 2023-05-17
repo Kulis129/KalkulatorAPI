@@ -2,7 +2,7 @@ FROM ubuntu:latest
 EXPOSE 8080
 
 RUN apt update
-RUN apt -y upgade
+RUN apt -y upgrade
 RUN apt -y install openjdk-19-jdk
 RUN apt -y install maven
 RUN apt -y install git
