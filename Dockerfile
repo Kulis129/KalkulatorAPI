@@ -2,10 +2,10 @@ FROM ubuntu:latest
 EXPOSE 8080
 
 RUN apt update
-RUN apt upgade
-RUN apt install -y openjdk-19-jdk
-RUN apt install -y maven
-RUN apt install -y git
+RUN apt -y upgade
+RUN apt -y install openjdk-19-jdk
+RUN apt -y install maven
+RUN apt -y install git
 
 RUN git clone https://github.com/Kulis129/KalkulatorAPI.git
 
