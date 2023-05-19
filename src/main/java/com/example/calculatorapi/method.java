@@ -23,8 +23,4 @@ public class method {
     public static double multiplication (double a, double b){
         return a * b;
     }
-
-    public static double sqrt (double a){
-        return Math.sqrt(a);
-    }
 }
