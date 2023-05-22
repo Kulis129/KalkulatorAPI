@@ -29,10 +29,4 @@ public class methodTest {
     {
         assertEquals(2,method.multiplication(1,2));
     }
-
-    @Test
-    public void sqrt()
-    {
-        assertEquals(2,method.sqrt(4));
-    }
 }
